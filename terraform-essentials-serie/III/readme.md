@@ -1,0 +1,1 @@
+Estos archivos fueron los usados para el tercer artículo de la serie #TerraformEssentials, el mismo lo podrán encontrar en este enlace: https://www.cduser.com/terraform-essentials-iii-infraestructura-escalable-variables/
