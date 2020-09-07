@@ -1,3 +1,3 @@
 # Terraform Recipes
 
-[terraform-logo](terraform.jpg)
+![terraform-logo](terraform.jpg)
