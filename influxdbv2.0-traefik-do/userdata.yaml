@@ -1,0 +1,13 @@
+# In this file we define what the packages going to be installed and the file and actions to create files and folders.
+# cloud-config
+package_update: true
+packages:
+  - docker.io
+  - docker-compose
+runcmd:
+  - cd /
+  - mkdir influxdb
+  - touch /acme.json
+  - chmod 600 /acme.json
+  - cd /  
+  - docker-compose up -d
