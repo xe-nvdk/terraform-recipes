@@ -2,7 +2,7 @@
 ---
 **NOTE**
 
-At the time this recipe was created, InfluxDB v2 is still in Beta. This Terraform recipe was made and tested with Beta 16. Please don't use this in production. When InfluxDB v2.0 reaches GA, this recipe will be updated accordingly. You can stay updated about the launch of v2.0 from [here](https://github.com/influxdata/influxdb/releases).
+At the time this recipe was created, InfluxDB v2 is not GA yet. This recipe was updated (10/03/2020) to support Release Candidate 1. This Terraform recipe was made and tested with Release Candidate 1. Please don't use this in production. When InfluxDB v2.0 reaches GA, this recipe will be updated accordingly. You can stay updated about the launch of v2.0 from [here](https://github.com/influxdata/influxdb/releases).
 
 ---
 
@@ -12,7 +12,7 @@ This is what I call a Terraform recipe, was made with the purpose of share what 
 
 ## What Technologies this recipe is "touching"?
 
-This recipe is made with Terraform 0.13.2, involve the deployment Docker and docker-compose package, InfluxDB v2.0 Beta 16, Traefik as Reverse Proxy with Let's Encrypt (SSL) support, creation of the droplet (Virtual Machine), shipment of a SSH public key and DNS configuration on DigitalOcean. Eight technologies in a recipe, sounds cool, right?
+This recipe is made with Terraform 0.13.2, involve the deployment Docker and docker-compose package, InfluxDB v2.0 Release Candidate 1, Traefik as Reverse Proxy with Let's Encrypt (SSL) support, creation of the droplet (Virtual Machine), shipment of a SSH public key and DNS configuration on DigitalOcean. Eight technologies in a recipe, sounds cool, right?
 
 ## How can I use this recipe?
 
