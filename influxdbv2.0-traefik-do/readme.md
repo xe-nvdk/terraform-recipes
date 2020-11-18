@@ -2,7 +2,7 @@
 ---
 **NOTE**
 
-At the time this recipe was created, InfluxDB v2 is not GA yet. This recipe was updated (10/03/2020) to support Release Candidate 1. This Terraform recipe was made and tested with Release Candidate 1. Please don't use this in production. When InfluxDB v2.0 reaches GA, this recipe will be updated accordingly. You can stay updated about the launch of v2.0 from [here](https://github.com/influxdata/influxdb/releases).
+InfluxDB v2 is GA. This recipe was updated (11/18/2020) to support the v2.0.1.
 
 ---
 
@@ -12,7 +12,7 @@ This is what I call a Terraform recipe, was made with the purpose of share what 
 
 ## What Technologies this recipe is "touching"?
 
-This recipe is made with Terraform 0.13.2, involve the deployment Docker and docker-compose package, InfluxDB v2.0 Release Candidate 1, Traefik as Reverse Proxy with Let's Encrypt (SSL) support, creation of the droplet (Virtual Machine), shipment of a SSH public key and DNS configuration on DigitalOcean. Eight technologies in a recipe, sounds cool, right?
+This recipe is made with Terraform 0.13.2, involve the deployment Docker and docker-compose package, InfluxDB v2.0.1, Traefik as Reverse Proxy with Let's Encrypt (SSL) support, creation of the droplet (Virtual Machine), shipment of a SSH public key and DNS configuration on DigitalOcean. Eight technologies in a recipe, sounds cool, right?
 
 ## How can I use this recipe?
 
@@ -20,7 +20,7 @@ Follow this step to start to using this recipe:
 
 * Create a DigitalOcean Account with [this link](https://m.do.co/c/c8aa8e5fd348). Please, use the link to get $100 to try DigitalOcean.
 * Get a Read & Write [token key](https://cloud.digitalocean.com/account/api/tokens) from DigitalOcean.
-* Pass your token as environment variable running <code>$ export TF_VAR_digitalocean_token="your-token".</code>
+* Pass your token as environment variable running <code>$ export TF_VAR_token="your-token".</code>
 * Edit your dns.tf file with your domain.
 * Edit the docker-compose.yml file defining your email address and the URL for the InfluxDB container.
 * If you want a bigger instance to run InfluxDB, you can change the size of the droplet in the droplet.tf file.
