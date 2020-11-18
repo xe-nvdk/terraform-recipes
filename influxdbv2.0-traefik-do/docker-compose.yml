@@ -10,7 +10,7 @@ services:
       - --providers.docker
       - --api
       - --certificatesresolvers.leresolver.acme.httpchallenge=true
-      - --certificatesresolvers.leresolver.acme.email=name@domain.com # Set your email here.
+      - --certificatesresolvers.leresolver.acme.email=your-email # Change me
       - --certificatesresolvers.leresolver.acme.storage=/acme.json
       - --certificatesresolvers.leresolver.acme.httpchallenge.entrypoint=web
     ports:
@@ -30,13 +30,13 @@ services:
 
   influxdbv2:
     container_name: influxdb
-    image: quay.io/influxdb/influxdb:2.0.0-rc-1
+    image: quay.io/influxdb/influxdb:v2.0.1
     volumes:
       - /influxdb:/root/.influxdbv2/
     labels:
-      - "traefik.http.routers.influx.rule=Host(`influx.your-domain.com`)" # Set your subdomain here.
+      - "traefik.http.routers.influx.rule=Host(`influx.your-domain.com`)" # Change me
       - "traefik.http.routers.influx.entrypoints=websecure"
       - "traefik.http.routers.influx.tls=true"
       - "traefik.http.routers.influx.tls.certresolver=leresolver"
-      - "traefik.http.services.influx.loadbalancer.server.port=8086"
+      - "traefik.http.services.influx.loadbalancer.server.port=9999"
       - "traefik.http.routers.influx.service=influx"

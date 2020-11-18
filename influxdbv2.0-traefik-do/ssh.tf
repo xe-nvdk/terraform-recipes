@@ -1,7 +1,6 @@
-# Ship our SSH public key to DO
+#Llevamos nuestra llave a DO
 
-# Create a new SSH key
-resource "digitalocean_ssh_key" "influx" {
-  name       = "influx"
+resource "digitalocean_ssh_key" "influxdb" {
+  name       = "influxdb"
   public_key = file("id_rsa.pub")
 }

@@ -1,5 +1,4 @@
-# In this file we define what the packages going to be installed and the file and actions to create files and folders.
-# cloud-config
+#cloud-config
 package_update: true
 packages:
   - docker.io
@@ -9,5 +8,6 @@ runcmd:
   - mkdir influxdb
   - touch /acme.json
   - chmod 600 /acme.json
-  - cd /  
+  - cd /
+  - wget https://storage.com/docker-compose.yml # Change for the URl you have hosted your file  
   - docker-compose up -d

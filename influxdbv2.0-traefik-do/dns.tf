@@ -1,14 +1,14 @@
-# If you not have this domain created in DigitalOcean, Terraform will do for you, but if exist, will drop an error. If you're already have the domain configured in control panel, add the subdomain record manually. 
+# Add a domain name
 
-resource "digitalocean_domain" "your-domain" {
-  name = "your-domain.com"
+resource "digitalocean_domain" "default" {
+   name = "your-domain" # Change me
 }
 
-# create subdomain for influxdb
-resource "digitalocean_record" "influx" {
-  domain = "digitalocean_domain.your-domain.name"
+# Add an A record to the domain for your-domain.com.
+
+resource "digitalocean_record" "influxdb" {
+  domain = digitalocean_domain.default.name
   type   = "A"
-  name   = "influx"
-  ttl    = "35"
-  value  = "digitalocean_droplet.influxdb.ipv4_address"
+  name   = "influxdb"
+  value  = digitalocean_droplet.influxdb.ipv4_address
 }
